@@ -20,7 +20,7 @@ I worked on this project by following a tutorial to learn the basics of Unity ga
 - Unity Engine
 
 ## Getting Started
-To play the game, download the executable from the `Build` folder and run it on your computer.
+To play the game, download the executable from the `Flappy Birb` folder and run it on your computer.
 
 ## Future Work
 
