@@ -1,36 +1,82 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
 public class LogicScript : MonoBehaviour
 {
-    public int playerScore;
-    public Text scoreText;
-    public GameObject gameOverScreen;
-    public PauseScript pauseSystem;
+    public static LogicScript Instance { get; private set; }
+    private bool isPaused;
 
-    [ContextMenu("Increase Score")]
-    public void addScore(int scoreToAdd = 1)
+    private void Awake()
     {
-        playerScore += scoreToAdd;
-        scoreText.text =  playerScore.ToString();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    [ContextMenu("Restart Game")]
-    public void restartGame()
+    void Start()
     {
-        pauseSystem.SetIsPaused(false);
+        isPaused = false;
+    }
+
+    //
+    // Game Logic
+    //
+
+    public void SwitchPause() {
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0 : 1;
+    }
+
+    public void PauseGame() {
+        isPaused = true;
+        Time.timeScale = 0;
+    }
+
+    public void UnpauseGame() {
+        isPaused = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        String name = SceneManager.GetActiveScene().name;
-        Debug.Log("Game Restarted" + name);
     }
 
-    public void gameOver()
+    //
+    // Menus and Screens
+    //
+    public void StartMenu()
     {
-        gameOverScreen.SetActive(true);
+        SceneManager.LoadScene("Title Menu");
+    }
+
+    public void StartGame()
+    {
+        UnpauseGame();
+        SceneManager.LoadScene("Main Game");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game Quit");
+    }
+
+    public void OptionsMenu()
+    {
+        //TODO: Add options menu
+    }
+
+
+    //
+    // Getters
+    //
+    public bool GetIsPaused()
+    {
+        return isPaused;
     }
 }

@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 63921912}
   m_Layer: 5
   m_Name: PauseMenuScreen
-  m_TagString: Untagged
+  m_TagString: Screen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,7 +162,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &148692616
+--- !u!1 &194997574
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,41 +170,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 148692618}
-  - component: {fileID: 148692617}
+  - component: {fileID: 194997576}
+  - component: {fileID: 194997575}
   m_Layer: 0
-  m_Name: LogicManager
-  m_TagString: Logic
+  m_Name: SceneManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &148692617
+--- !u!114 &194997575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148692616}
+  m_GameObject: {fileID: 194997574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10fa2743a2763a4a8d9894786bb2fba, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c15dab9a82350e49ac97b34a29a225a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
   scoreText: {fileID: 468035941}
   gameOverScreen: {fileID: 2031393093}
-  pauseSystem: {fileID: 353480129}
---- !u!4 &148692618
+  pauseMenuScreen: {fileID: 63921911}
+--- !u!4 &194997576
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148692616}
+  m_GameObject: {fileID: 194997574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 832.42523, y: 464.13962, z: -7.2220445}
+  m_LocalPosition: {x: 626.3026, y: 118.86115, z: -10.274685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 148692617}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LogicScript, Assembly-CSharp
         m_MethodName: restartGame
         m_Mode: 1
@@ -543,51 +543,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334842336}
   m_CullTransparentMesh: 1
---- !u!1 &353480128
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 353480130}
-  - component: {fileID: 353480129}
-  m_Layer: 0
-  m_Name: PauseSystem
-  m_TagString: Logic
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &353480129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353480128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4214550fdc94a541914737f21c43831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenuScreen: {fileID: 63921911}
---- !u!4 &353480130
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353480128}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 731.51965, y: 351.69827, z: -3.89362}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417539396
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +635,7 @@ GameObject:
   - component: {fileID: 468035941}
   m_Layer: 5
   m_Name: ScoreCounter
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1110,7 +1065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 353480129}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
         m_MethodName: pauseMenu
         m_Mode: 1
@@ -1585,9 +1540,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 1388498162}
   flapStrength: 20
-  logic: {fileID: 148692617}
   birdIsAlive: 1
-  pauseSystem: {fileID: 353480129}
+  logic: {fileID: 0}
+  sceneManager: {fileID: 0}
 --- !u!1 &1490475127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1780,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601326526}
   m_CullTransparentMesh: 1
+--- !u!1 &1752861896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752861898}
+  - component: {fileID: 1752861897}
+  m_Layer: 0
+  m_Name: ButtonEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1752861897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752861896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a1e1e6301e70240bbcf5acf59256ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
+  playAgainButton: {fileID: 1864190633}
+  optionsButton: {fileID: 559990259}
+  startMenuButton: {fileID: 302764326}
+  restartButton: {fileID: 334842338}
+  resumeButton: {fileID: 628962240}
+--- !u!4 &1752861898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752861896}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 731.51965, y: 351.69827, z: -3.89362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1864190631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1908,7 +1913,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 148692617}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LogicScript, Assembly-CSharp
         m_MethodName: restartGame
         m_Mode: 1
@@ -2016,7 +2021,7 @@ GameObject:
   - component: {fileID: 2031393094}
   m_Layer: 5
   m_Name: GameOverScreen
-  m_TagString: Untagged
+  m_TagString: Screen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2051,5 +2056,5 @@ SceneRoots:
   - {fileID: 1970467061}
   - {fileID: 717591743}
   - {fileID: 492755361}
-  - {fileID: 148692618}
-  - {fileID: 353480130}
+  - {fileID: 1752861898}
+  - {fileID: 194997576}
