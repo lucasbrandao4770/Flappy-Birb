@@ -24,14 +24,14 @@ To play the game, download the executable from the `Flappy Birb` folder and run 
 
 ## Future Work
 
-- [ ] **Add an Esc Menu**: Implement a pause menu that appears when the 'Esc' key is pressed, allowing the player to pause and resume the game.
-- [ ] **Add Exit Button**: Include an exit button in the pause menu that closes the game after prompting the player for confirmation.
+- [x] **Add an Esc Menu**: Implement a pause menu that appears when the 'Esc' key is pressed, allowing the player to pause and resume the game.
+- [ ] **Add Title Screen**: Develop a separate scene for the game’s title screen, including options to start the game, view instructions, and exit.
+- [ ] **Add Exit Button**: Include an exit button in the Title Screen that closes the game after prompting the player for confirmation.
 - [ ] **Implement Game Over Condition**: Ensure the game ends if the bird flies off the screen.
 - [ ] **Prevent Score Increase After Game Over**: Make sure the score does not continue to increase after the game is over.
 - [ ] **Add Sound Effects**: Integrate sound effects using the `AudioSource` component to enhance the gaming experience.
 - [ ] **Create Background Clouds**: Use the Particle System to add dynamic clouds in the background for a more immersive environment.
 - [ ] **Animate Bird Flapping**: Create an animation for the bird's wings to flap, making the game more visually appealing.
-- [ ] **Add Title Screen**: Develop a separate scene for the game’s title screen, including options to start the game, view instructions, and exit.
 - [ ] **Save High Scores**: Use `PlayerPrefs` to save the player's high scores and display them in the UI.
 
 ## Credits
@@ -50,6 +50,7 @@ The initial version of this project was developed by following a tutorial by Mar
 
 ### v0.2.0 (Planned)
 - Add an Esc menu that pauses the game.
+- Add a Title Screen
 - Add Exit button that closes the game (prompts confirmation).
 - Implement game over if the bird goes off screen.
 - Ensure score can't go up after game over.
