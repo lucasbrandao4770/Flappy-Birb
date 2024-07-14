@@ -4,25 +4,19 @@ using UnityEngine;
 
 public class PipeMiddleScript : MonoBehaviour
 {
-    public LogicScript logic;
+    public SceneManagerScript sceneManager;
 
     // Start is called before the first frame update
     void Start()
     {
-       logic = GameObject.Find("LogicManager").GetComponent<LogicScript>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        sceneManager = GameObject.Find("SceneManager").GetComponent<SceneManagerScript>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 3)
         {
-            logic.addScore();
+            sceneManager.addScore();
         }
     }
 
