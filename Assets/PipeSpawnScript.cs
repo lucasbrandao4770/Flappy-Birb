@@ -4,29 +4,31 @@ using UnityEngine;
 
 public class PipeSpawnScript : MonoBehaviour
 {
-    public GameObject pipe;
-    public float spawnRate;
-    private float timer = 0;
-    public float heightOffset = 10;
+    public GameObject pipeObject;
+    public float spawnDistance;
+    public float heightOffset;
+    private GameObject lastPipe;
 
     // Start is called before the first frame update
     void Start()
     {
+        spawnDistance = 20.6f;
+        heightOffset = 10;
         SpawnPipe();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer < spawnRate)
-        {
-            timer += Time.deltaTime;
-        }
-        else
+        if (getDistanceFromPipe(transform.position.x, lastPipe) > spawnDistance)
         {
             SpawnPipe();
-            timer = 0;
         }
+    }
+
+    float getDistanceFromPipe(float spawnerPositionX, GameObject pipe)
+    {
+        return spawnerPositionX - pipe.transform.position.x;
     }
 
     void SpawnPipe()
@@ -36,6 +38,6 @@ public class PipeSpawnScript : MonoBehaviour
 
         Vector3 newPosition = new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0);
 
-        Instantiate(pipe, newPosition, transform.rotation);
+        lastPipe = Instantiate(pipeObject, newPosition, transform.rotation);
     }
 }
