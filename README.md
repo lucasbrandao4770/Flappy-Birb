@@ -25,7 +25,7 @@ To play the game, download the executable from the `Flappy Birb` folder and run 
 ## Future Work
 
 - [x] **Add an Esc Menu**: Implement a pause menu that appears when the 'Esc' key is pressed, allowing the player to pause and resume the game.
-- [ ] **Add Title Screen**: Develop a separate scene for the game’s title screen, including options to start the game, view instructions, and exit.
+- [X] **Add Title Screen**: Develop a separate scene for the game’s title screen, including options to start the game, view instructions, and exit.
 - [ ] **Add Exit Button**: Include an exit button in the Title Screen that closes the game after prompting the player for confirmation.
 - [ ] **Implement Game Over Condition**: Ensure the game ends if the bird flies off the screen.
 - [ ] **Prevent Score Increase After Game Over**: Make sure the score does not continue to increase after the game is over.
